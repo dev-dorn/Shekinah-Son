@@ -2,6 +2,7 @@ import './App.css'
 import About from './components/About'
 import Hero from './components/herosection'
 import Navbar from './components/navbar'
+import Sermons from './components/Sermons'
 
 function App() {
 
@@ -9,8 +10,8 @@ function App() {
     <>
     <Navbar/>
     <Hero/>
-   
     <About/>
+    <Sermons/>
 
     </>
   )
