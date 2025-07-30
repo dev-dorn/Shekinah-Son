@@ -42,7 +42,8 @@ const About = () => {
                         </div>
                         <div className="md:w-1/2">
                             <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 wb-6">Our mission & vision</h2>
-                            <p className="text-gray-600 mb-6">At Light Of Hope Christian Church, we are committed to spreading the love of Christ and building a community of believers who support and uplift one another.</p>
+                            <p className="text-gray-600 mb-6">Shekinah sons is an interdenominational movement under the leadership of John Mash, thats is focused on raising the believers
+</p>
                             <p className="text-gray-600 mb-6">Founded in 1995, our church has been a beacon of hope in the community , offering guidance, charitable works and meaning worship services. </p>
                             <div className="space-y-4">
                                 <div className="flex items-start">

@@ -5,7 +5,7 @@ const Hero = () => {
             <h1 className="heading-font text-4xl md:text-6xl font-bold mb-6">
                 Light Of Hope Christian Church
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">A place pf worship, fellowship, and spiritual growth</p>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">A place of worship, fellowship, and spiritual growth</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button className="bg-blue-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
                     Join Our Services
