@@ -8,20 +8,20 @@ const cardData: CardData[] = [
     {
         title: "Who we are",
         description: "We are a group of the most ordinary people you could ever meet. We all have our lives, our dreams, our problems, and concerns. However, once we get together under this wonderful roof, we forget all about what hurts. We share only one powerful goal, which is to get closer to God mentally and spiritually.",
-        image: "./public/youth.jpg",
+        image: "./youth.jpg",
         icon: "fas fa-arrow-right ml-2"
     },
     {
         title: "what we Do",
         description: "We believe the church is a place to learn more about our God! If you are looking for a church where you can belong and where God’s love is changing people, you’ve come to the right place. You will find answers, healing, restoration, and life-long relationships with us. This is a place for real people and faith.",
-        image: "./public/church.jpg",
+        image: "./church.jpg",
         icon: "fas fa-arrow-right ml-2"
 
     },
     {
         title: "What to expect",
         description: "You can expect to be welcomed into a friendly, positive environment. Our sermons and are filled with peace and praises, readings and inspiring messages from the Bible. We are a big family of generous, helpful, and kindhearted members. You have a free source of coffee and cookings.",
-        image: "./public/children.jpg",
+        image: "./children.jpg",
         icon: "fas fa-arrow-right ml-2"
     }
 
@@ -35,7 +35,7 @@ const About = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                            <img src="./public/church.jpg"
+                            <img src="./church.jpg"
                                 alt="church gathering"
                                 className="rounded-lg shadow-xl w-full h-auto" />
 
