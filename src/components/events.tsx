@@ -2,7 +2,7 @@ const Events = () => {
     return (
         <div>
             <>
-                <section className="py-16 bg-gray-100">
+                <section id="events" className="py-16 bg-gray-100">
                     <div className='container mx-auto px-4'>
                         <div className="text-center mb-12">
                             <h2 className='heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4'>
@@ -19,7 +19,7 @@ const Events = () => {
                                     <div className="flex items-center mb-4">
                                         <div className="bg-blue-100 text-blue-800 rounded-lg p-3 text-center mr-4">
                                             <div className="text-xl font-bold">15</div>
-                                            <div className="text-sm uppercase">september</div>
+                                            <div className="text-sm uppercase">September</div>
                                         </div>
                                         <div>
                                             <h3 className="heading-font text-xl font-bold text-gray-800">Summer Bible Study </h3>
@@ -41,7 +41,7 @@ const Events = () => {
                                     <div className="flex items-center mb-4">
                                         <div className="bg-blue-100 text-blue-800 rounded-lg p-3 text-center mr-4">
                                             <div className="text-xl font-bold">15</div>
-                                            <div className="text-sm uppercase">september</div>
+                                            <div className="text-sm uppercase">September</div>
                                         </div>
                                         <div>
                                             <h3 className="heading-font text-xl font-bold text-gray-800">Summer Bible Study </h3>
@@ -63,7 +63,7 @@ const Events = () => {
                                     <div className="flex items-center mb-4">
                                         <div className="bg-blue-100 text-blue-800 rounded-lg p-3 text-center mr-4">
                                             <div className="text-xl font-bold">15</div>
-                                            <div className="text-sm uppercase">september</div>
+                                            <div className="text-sm uppercase">September</div>
                                         </div>
                                         <div>
                                             <h3 className="heading-font text-xl font-bold text-gray-800">Summer Bible Study </h3>
@@ -85,7 +85,7 @@ const Events = () => {
                                     <div className="flex items-center mb-4">
                                         <div className="bg-blue-100 text-blue-800 rounded-lg p-3 text-center mr-4">
                                             <div className="text-xl font-bold">15</div>
-                                            <div className="text-sm uppercase">september</div>
+                                            <div className="text-sm uppercase">September</div>
                                         </div>
                                         <div>
                                             <h3 className="heading-font text-xl font-bold text-gray-800">Summer Bible Study </h3>

@@ -1,4 +1,3 @@
-import './App.css'
 import About from './components/About'
 import ContactSection from './components/contact'
 import Events from './components/events'

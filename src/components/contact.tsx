@@ -8,7 +8,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section id="contact" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           {/* Contact Info Section */}

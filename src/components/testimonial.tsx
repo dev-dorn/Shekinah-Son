@@ -10,22 +10,22 @@ type Testimonial = {
 };
 const testimonials: Testimonial[] = [
     {
-        name: 'jacinta martinez',
-        since: '2028',
+        name: 'Jacinta Martinez',
+        since: '2018',
         quote: 'Divine Light Ministries has been such a blessing...',
-        imgSrc: './woman.jpg',
+        imgSrc: '/woman.jpg',
     },
     {
         name: 'Grace Wanjiku',
         since: '2020',
         quote: 'I found peace and purpose here. The worship is uplifting.',
-        imgSrc: './crystal.jpg',
+        imgSrc: '/crystal.jpg',
     },
     {
         name: 'Joseph Munga',
         since: "2024",
         quote: 'I found peace and purpose here. The worship is uplifting.',
-        imgSrc: './man.jpg'
+        imgSrc: '/man.jpg'
     }
 ];
 
@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => (
                 <h2 className='heading-font text-3xl md:text-4xl font-bold mb-4'>
                     What People Are Saying
                 </h2>
-                <p className='max-w-2xl mx-auto'>Hear from members of ou church family</p>
+                <p className='max-w-2xl mx-auto'>Hear from members of our church family</p>
 
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>

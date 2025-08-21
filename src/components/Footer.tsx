@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <span className="heading-font text-2xl font-bold">Shekinah</span>
             </div>
             <p className="text-gray-400 mb-4">
-             Shekinah sons is an interdenominational movement under the leadership of John Mas, thats is focused on raising the believers
+             Shekinah Sons is an interdenominational movement under the leadership of John Mas, focused on raising believers.
             </p>
             <div className="flex space-x-4">
               {["facebook-f", "twitter", "instagram", "youtube"].map((icon, idx) => (
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Text */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Apexium tech solutions. All Rights Reserved.</p>
+          <p>&copy; 2025 Apexium Tech Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

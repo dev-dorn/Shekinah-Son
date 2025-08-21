@@ -8,20 +8,20 @@ const cardData: CardData[] = [
     {
         title: "Who we are",
         description: "We are a group of the most ordinary people you could ever meet. We all have our lives, our dreams, our problems, and concerns. However, once we get together under this wonderful roof, we forget all about what hurts. We share only one powerful goal, which is to get closer to God mentally and spiritually.",
-        image: "./youth.jpg",
+        image: "/youth.jpg",
         icon: "fas fa-arrow-right ml-2"
     },
     {
         title: "what we Do",
         description: "We believe the church is a place to learn more about our God! If you are looking for a church where you can belong and where God’s love is changing people, you’ve come to the right place. You will find answers, healing, restoration, and life-long relationships with us. This is a place for real people and faith.",
-        image: "./church.jpg",
+        image: "/church.jpg",
         icon: "fas fa-arrow-right ml-2"
 
     },
     {
         title: "What to expect",
         description: "You can expect to be welcomed into a friendly, positive environment. Our sermons and are filled with peace and praises, readings and inspiring messages from the Bible. We are a big family of generous, helpful, and kindhearted members. You have a free source of coffee and cookings.",
-        image: "./children.jpg",
+        image: "/children.jpg",
         icon: "fas fa-arrow-right ml-2"
     }
 
@@ -31,20 +31,20 @@ const cardData: CardData[] = [
 const About = () => {
     return (
         <>
-            <section className="py-16 bg-white">
+            <section id="about" className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                            <img src="./church.jpg"
+                            <img src="/church.jpg"
                                 alt="church gathering"
                                 className="rounded-lg shadow-xl w-full h-auto" />
 
                         </div>
                         <div className="md:w-1/2">
-                            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 wb-6">Our mission & vision</h2>
-                            <p className="text-gray-600 mb-6">Shekinah sons is an interdenominational movement under the leadership of John Mash, thats is focused on raising the believers
+                            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
+                            <p className="text-gray-600 mb-6">Shekinah Sons is an interdenominational movement under the leadership of John Mash that is focused on raising believers
 </p>
-                            <p className="text-gray-600 mb-6">Founded in 1995, our church has been a beacon of hope in the community , offering guidance, charitable works and meaning worship services. </p>
+                            <p className="text-gray-600 mb-6">Founded in 1995, our church has been a beacon of hope in the community, offering guidance, charitable works, and meaningful worship services.</p>
                             <div className="space-y-4">
                                 <div className="flex items-start">
                                     <i className="fas fa-cross text-blue-600 mt-1 mr-3"></i>
@@ -58,7 +58,7 @@ const About = () => {
                                     <i className="fas fa-hands-praying text-blue-600 mt-1 mr-3"></i>
                                     <div>
                                         <h3 className="font-bold text-gray-800">Prayer Ministry</h3>
-                                        <p className="text-gray-600">Powerfull intercession for all needs</p>
+                                        <p className="text-gray-600">Powerful intercession for every need</p>
 
                                     </div>
 

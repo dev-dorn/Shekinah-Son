@@ -6,7 +6,7 @@ const NewsletterSection: React.FC =() =>{
         console.log("Newsletter submitted");
     };
     return(
-        <section className='py-16 bg-white'>
+        <section id='newsletter' className='py-16 bg-white'>
             <div className='container mx-auto px-4'>
                 <div className='max-w-4xl mx-auto bg-gray-100 rounded-xl p-8 md:p-12'>
                     <div className='text-center mb-8'>
@@ -23,7 +23,7 @@ const NewsletterSection: React.FC =() =>{
                             type='email'
                             placeholder='your email address'
                             required
-                            className='flex-grow px-4 py-3 rounded-lg border border-grow-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent'
+                            className='flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent'
                             />
                         <button
                             type='submit'
