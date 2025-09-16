@@ -123,7 +123,7 @@
   }
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 html {
@@ -132,12 +132,25 @@ html {
 }
 
 .heading-font {
-  font-family: "Playfair Display", serif;
+  font-family: "Marcellus", "Playfair Display", serif;
+  letter-spacing: 0.01em;
+}
+
+/* Subtle page gradient background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1400px 600px at 10% -10%, oklch(0.97 0.03 264) 0%, transparent 55%),
+              radial-gradient(1200px 500px at 110% 10%, oklch(0.98 0.03 84) 0%, transparent 50%),
+              radial-gradient(900px 400px at 50% 120%, oklch(0.97 0.02 16) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80");
+  background: linear-gradient(rgba(0, 8, 20, 0.65), rgba(0, 8, 20, 0.6)),
+    url("/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -166,7 +179,7 @@ html {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #f59e0b;
+  background: linear-gradient(90deg, #f59e0b, #f97316, #fb7185);
   transition: width 0.3s ease;
 }
 
@@ -182,4 +195,75 @@ html {
 
 .mobile-menu.open {
   max-height: 500px;
+}
+
+/* Glass and glow utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.glass-dark {
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+.btn-primary-gradient:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+}
+.nav-glow {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 10px 30px rgba(99,102,241,0.15);
+}
+.brand-gradient {
+  background: linear-gradient(90deg, #111827, #1f2937);
+}
+.brand-text-gradient {
+  background: linear-gradient(90deg, #f59e0b, #f97316, #fb7185);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Angled section helper */
+.angle-top {
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+}
+.angle-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%);
+}
+
+/* Fixed background section utilities */
+.bg-fixed-hero {
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    url('/hero.jpg');
+  background-attachment: scroll, fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-fixed-church {
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    url('/church.jpg');
+  background-attachment: scroll, fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-fixed-youth {
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    url('/youth.jpg');
+  background-attachment: scroll, fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

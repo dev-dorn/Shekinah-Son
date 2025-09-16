@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import { apiFetch } from "../lib/utils";
+import toast from 'react-hot-toast'
 
 const ContactSection: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState<string | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log("Contact form submitted");
+    setMessage(null)
+    setLoading(true)
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      name: String(formData.get('name') || ''),
+      email: String(formData.get('email') || ''),
+      subject: String(formData.get('subject') || ''),
+      message: String(formData.get('message') || ''),
+    }
+    try {
+      await apiFetch('/contacts', { method: 'POST', body: JSON.stringify(payload) })
+      toast.success('Message sent! We will get back to you shortly.')
+      setMessage('Message sent! We will get back to you shortly.')
+      form.reset()
+    } catch (err: any) {
+      toast.error(err.message || 'Failed to send message')
+      setMessage(err.message || 'Failed to send message')
+    } finally {
+      setLoading(false)
+    }
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-100">
+    <section id="contact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           {/* Contact Info Section */}
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-6">Contact Us</h2>
+            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
             <p className="text-gray-600 mb-8">
               We'd love to hear from you! Whether you have questions, prayer requests, or just want to say hello, our team is here to help.
             </p>
@@ -81,7 +105,7 @@ const ContactSection: React.FC = () => {
 
           {/* Contact Form */}
           <div className="md:w-1/2">
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
               {[
                 { label: "Your Name", id: "name", type: "text" },
                 { label: "Email Address", id: "email", type: "email" },
@@ -93,6 +117,7 @@ const ContactSection: React.FC = () => {
                     id={id}
                     type={type}
                     required
+                    name={id}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                   />
                 </div>
@@ -105,17 +130,22 @@ const ContactSection: React.FC = () => {
                     id="message"
                     rows={5}
                     required
+                    name="message"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+                disabled={loading}
+                className="w-full btn-primary-gradient text-white font-semibold py-3 px-4 rounded-lg transition duration-300 disabled:opacity-60"
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
+            {message && (
+              <p className={`text-sm mt-3 ${message.includes('sent') ? 'text-green-600' : 'text-red-600'}`}>{message}</p>
+            )}
           </div>
         </div>
       </div>

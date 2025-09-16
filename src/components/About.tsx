@@ -31,7 +31,7 @@ const cardData: CardData[] = [
 const About = () => {
     return (
         <>
-            <section id="about" className="py-16 bg-white">
+            <section id="about" className="py-16 bg-white bg-fixed-church">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -41,8 +41,8 @@ const About = () => {
 
                         </div>
                         <div className="md:w-1/2">
-                            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
-                            <p className="text-gray-600 mb-6">Shekinah Sons is an interdenominational movement under the leadership of John Mash that is focused on raising believers
+                            <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission & Vision</h2>
+                            <p className="text-gray-600 mb-6">Shekinah Sons is an interdenominational movement under the leadership of Joseph Macharia  that is focused on raising believers
 </p>
                             <p className="text-gray-600 mb-6">Founded in 1995, our church has been a beacon of hope in the community, offering guidance, charitable works, and meaningful worship services.</p>
                             <div className="space-y-4">
@@ -79,10 +79,10 @@ const About = () => {
                 </div>
             </section>
             {/*who we are*/}
-            <section className="py-16 bg-gray-100">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        <h2 className="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                             Our Ministries
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">We offer various ministries to help you grow in faith and connect with others
@@ -137,7 +137,8 @@ const About = () => {
                         {cardData.map((card, index) => (
                             <div
                                 key={index}
-                                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                                className="group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                                data-aos="fade-up" data-aos-delay={index * 50}
                             >
                                 <div
                                     className="h-48 bg-cover bg-center"
@@ -147,14 +148,14 @@ const About = () => {
                                 <div className="p-6">
                                     <div className="flex items-center mb-3">
                                         <i className={`${card.icon} text-2xl text-blue-600 mr-3`}></i>
-                                        <h3 className="text-xl font-bold text-gray-800">{card.title}</h3>
+                                        <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>
                                     </div>
 
                                     <p className="text-gray-600 mb-4">{card.description}</p>
 
                                     <a
                                         href="#"
-                                        className="text-blue-600 font-semibold hover:text-amber-700 flex items-center"
+                                        className="font-semibold flex items-center brand-text-gradient hover:opacity-80"
                                     >
                                         Learn More <i className="fas fa-arrow-right ml-2"></i>
                                     </a>

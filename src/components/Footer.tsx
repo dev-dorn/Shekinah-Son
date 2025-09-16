@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-950 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo + Social */}
@@ -12,14 +12,14 @@ const Footer: React.FC = () => {
               <span className="heading-font text-2xl font-bold">Shekinah</span>
             </div>
             <p className="text-gray-400 mb-4">
-             Shekinah Sons is an interdenominational movement under the leadership of John Mas, focused on raising believers.
+             Shekinah Sons is an interdenominational movement under the leadership of Joseph Macharia, focused on raising believers.
             </p>
             <div className="flex space-x-4">
               {["facebook-f", "twitter", "instagram", "youtube"].map((icon, idx) => (
                 <a
                   key={idx}
                   href="#"
-                  className="text-gray-400 hover:text-amber-600 transition duration-300"
+                  className="text-gray-400 hover:text-white transition duration-300"
                   aria-label={`Link to ${icon}`}
                 >
                   <i className={`fab fa-${icon}`} />
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {["Home", "About Us", "Beliefs", "Ministries", "Sermons", "Events"].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" className="text-gray-400 hover:text-amber-600 transition duration-300">
+                  <a href="#" className="text-gray-400 hover:text-white transition duration-300">
                     {link}
                   </a>
                 </li>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {["Children", "Youth", "Women", "Men", "Seniors", "Missions"].map((group, idx) => (
                 <li key={idx}>
-                  <a href="#" className="text-gray-400 hover:text-amber-600 transition duration-300">
+                  <a href="#" className="text-gray-400 hover:text-white transition duration-300">
                     {group}
                   </a>
                 </li>
@@ -77,8 +77,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Text */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Apexium Tech Solutions. All rights reserved.</p>
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Shekinah Sons. All rights reserved.</p>
         </div>
       </div>
     </footer>

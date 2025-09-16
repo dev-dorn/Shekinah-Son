@@ -16,16 +16,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     imgSrc,
     stars = 5,
 })=> (
-    <div className='rounded-lg p-6 bg-blue-500 text-white shadow-lg'>
+    <div className='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-md transition'>
         <div className='flex items-center mb-4'>
             <img src={imgSrc} alt={`testimonial ${name}`} className="w-12 h-12 rounded-full mr-4 object-cover"/>
             <div>
-                <h4 className='font-bold'>{name}</h4>
-                <p className='text-blue-200 text-sm'>Member since {since}</p>
+                <h4 className='font-bold text-gray-900'>{name}</h4>
+                <p className='text-gray-500 text-sm'>Member since {since}</p>
 
             </div>
         </div>
-        <p className='italic mb-2'>"{quote}"</p>
+        <p className='italic text-gray-700 mb-2'>"{quote}"</p>
         <StarRating count={stars}/>
     </div>
 )

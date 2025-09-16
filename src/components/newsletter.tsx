@@ -1,16 +1,35 @@
 import type React from 'react';
+import { useState } from 'react'
+import { apiFetch } from '../lib/utils'
+import toast from 'react-hot-toast'
 
 const NewsletterSection: React.FC =() =>{
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+    const [email, setEmail] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState<string | null>(null)
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        console.log("Newsletter submitted");
+        setMessage(null)
+        setLoading(true)
+        try {
+            await apiFetch('/newsletter', { method: 'POST', body: JSON.stringify({ email }) })
+            toast.success('Subscribed successfully!')
+            setMessage('Subscribed successfully!')
+            setEmail('')
+        } catch (err: any) {
+            toast.error(err.message || 'Failed to subscribe')
+            setMessage(err.message || 'Failed to subscribe')
+        } finally {
+            setLoading(false)
+        }
     };
     return(
         <section id='newsletter' className='py-16 bg-white'>
             <div className='container mx-auto px-4'>
-                <div className='max-w-4xl mx-auto bg-gray-100 rounded-xl p-8 md:p-12'>
+                <div className='max-w-4xl mx-auto rounded-2xl border border-gray-100 bg-gray-50 p-8 md:p-12 shadow-sm'>
                     <div className='text-center mb-8'>
-                        <h2 className='heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4'>
+                        <h2 className='heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-3'>
                             Stay Connected
                         </h2>
                         <p className='text-gray-600'>
@@ -23,15 +42,23 @@ const NewsletterSection: React.FC =() =>{
                             type='email'
                             placeholder='your email address'
                             required
+                            value={email}
+                            onChange={(e)=>setEmail(e.target.value)}
                             className='flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent'
                             />
                         <button
                             type='submit'
-                            className='bg-blue-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300'>
-                        Subscribe
+                            disabled={loading}
+                            className='btn-primary-gradient text-white font-semibold py-3 px-8 rounded-lg transition duration-300 disabled:opacity-60'>
+                        {loading ? 'Subscribing...' : 'Subscribe'}
                         </button> 
                         
                     </form>
+                    {message && (
+                        <p className='text-center text-sm mt-4 {message.includes("success") ? "text-green-600" : "text-red-600"}'>
+                            {message}
+                        </p>
+                    )}
                     <p className='text-center text-sm text-gray-500 mt-4'>
                             We respect your privacy. Unsubscribe at any time.
                         </p>
