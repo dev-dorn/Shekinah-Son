@@ -93,10 +93,10 @@ const Events = () => {
                             e.preventDefault();
                             setSubmitting(true)
                             try {
-                                await apiFetch('/contacts', { method: 'POST', body: JSON.stringify({
+                                await apiFetch('/registrations', { method: 'POST', body: JSON.stringify({
+                                    eventId: (selected as any)._id,
                                     name: reg.name,
-                                    subject: `Event Registration: ${selected.title}`,
-                                    message: `Event: ${selected.title} on ${new Date(selected.startAt).toLocaleString()} at ${selected.location}. Phone: ${reg.phone}`,
+                                    phone: reg.phone,
                                 })})
                                 toast.success('Registration received!')
                                 setSelected(null)

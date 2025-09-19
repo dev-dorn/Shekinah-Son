@@ -11,6 +11,7 @@ import { Contact } from '../models/Contact.js'
 import { Ministry } from '../models/Ministry.js'
 import { Admin } from '../models/Admin.js'
 import { Devotion } from '../models/Devotion.js'
+import { Registration } from '../models/Registration.js'
 
 const router = Router()
 
@@ -71,6 +72,7 @@ const resources = [
   { path: 'contacts', model: Contact },
   { path: 'ministries', model: Ministry },
   { path: 'devotions', model: Devotion },
+  { path: 'registrations', model: Registration },
 ]
 
 for (const { path, model } of resources) {
